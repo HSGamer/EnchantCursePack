@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.hsgamer</groupId>
-    <artifactId>EnchantCursePack</artifactId>
+    <artifactId>enchant-curse-pack</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -17,6 +17,7 @@
     </properties>
 
     <build>
+        <finalName>${project.name}</finalName>
         <defaultGoal>clean package</defaultGoal>
         <plugins>
             <plugin>
