@@ -3,3 +3,4 @@ version: ${project.version}
 main: me.hsgamer.enchantcursepack.EnchantCursePack
 depend: [EnchantmentAPI]
 authors: [HSGamer]
+api-version: 1.16

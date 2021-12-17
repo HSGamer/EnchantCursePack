@@ -6,14 +6,15 @@ import com.sucy.enchant.api.Tasks;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.Hashtable;
+import java.util.IdentityHashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class Spike extends CustomEnchantment {
 
-    private static Hashtable<UUID, BukkitTask> tasks = new Hashtable<>();
-    private static String FREQUENCY = "frequency";
-    private static String DAMAGE = "damage";
+    private static final Map<UUID, BukkitTask> tasks = new IdentityHashMap<>();
+    private static final String FREQUENCY = "frequency";
+    private static final String DAMAGE = "damage";
 
     public Spike() {
         super("Curse Of Spike", "Cause Damage while wearing");
@@ -28,12 +29,14 @@ public class Spike extends CustomEnchantment {
         addNaturalItems(ItemSet.BOWS.getItems());
     }
 
+    @Override
     public void applyEquip(LivingEntity user, int level) {
         int frequency = (int) settings.get(FREQUENCY, level) * 20;
         double damage = settings.get(DAMAGE, level);
         tasks.put(user.getUniqueId(), Tasks.schedule(() -> user.damage(damage, user), frequency, frequency));
     }
 
+    @Override
     public void applyUnequip(LivingEntity user, int level) {
         tasks.remove(user.getUniqueId()).cancel();
     }
