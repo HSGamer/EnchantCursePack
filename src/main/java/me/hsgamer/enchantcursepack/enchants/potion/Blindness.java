@@ -1,7 +1,7 @@
 package me.hsgamer.enchantcursepack.enchants.potion;
 
-import com.sucy.enchant.api.ItemSet;
 import org.bukkit.potion.PotionEffectType;
+import studio.magemonkey.fabled.enchants.api.ItemSet;
 
 public class Blindness extends PotionCurse {
 

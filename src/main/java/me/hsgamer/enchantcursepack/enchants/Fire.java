@@ -1,10 +1,10 @@
 package me.hsgamer.enchantcursepack.enchants;
 
-import com.sucy.enchant.api.CustomEnchantment;
-import com.sucy.enchant.api.ItemSet;
-import com.sucy.enchant.api.Tasks;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.scheduler.BukkitTask;
+import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
+import studio.magemonkey.fabled.enchants.api.ItemSet;
+import studio.magemonkey.fabled.enchants.api.Tasks;
 
 import java.util.IdentityHashMap;
 import java.util.Map;

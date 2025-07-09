@@ -1,10 +1,10 @@
 package me.hsgamer.enchantcursepack.enchants;
 
-import com.sucy.enchant.api.CustomEnchantment;
-import com.sucy.enchant.api.ItemSet;
-import mc.promcteam.engine.mccore.util.Protection;
+import me.hsgamer.enchantcursepack.AllyCheck;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
+import studio.magemonkey.fabled.enchants.api.ItemSet;
 
 public class Thorn extends CustomEnchantment {
     private static final String PERCENTAGE = "percentage";
@@ -21,7 +21,7 @@ public class Thorn extends CustomEnchantment {
 
     @Override
     public void applyOnHit(LivingEntity user, LivingEntity target, int level, EntityDamageByEntityEvent event) {
-        if (!Protection.isAlly(user, target)) return;
+        if (AllyCheck.isAlly(user, target)) return;
         user.damage(event.getDamage() * settings.get(PERCENTAGE, level), target);
     }
 }

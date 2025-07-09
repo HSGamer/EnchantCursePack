@@ -1,8 +1,8 @@
 package me.hsgamer.enchantcursepack.enchants.potion;
 
-import com.sucy.enchant.api.CustomEnchantment;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.potion.PotionEffect;
+import studio.magemonkey.fabled.enchants.api.CustomEnchantment;
 
 public abstract class PotionCurse extends CustomEnchantment implements PotionEnchantment {
 

@@ -1,6 +1,7 @@
 name: EnchantCursePack
 version: ${project.version}
 main: me.hsgamer.enchantcursepack.EnchantCursePack
-depend: [ProEnchantmentAPI]
+depend: [FabledEnchants]
+softdepend: [Fabled]
 authors: [HSGamer]
 api-version: 1.16
