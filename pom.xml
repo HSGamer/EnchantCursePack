@@ -58,6 +58,12 @@
         </dependency>
         <dependency>
             <groupId>studio.magemonkey</groupId>
+            <artifactId>codex</artifactId>
+            <version>1.1.1-R0.4-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>studio.magemonkey</groupId>
             <artifactId>fabled-enchants</artifactId>
             <version>1.0.1-R0.4-SNAPSHOT</version>
             <scope>provided</scope>
